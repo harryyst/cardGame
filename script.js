@@ -183,7 +183,7 @@ function updateTimerDisplay() {
   }else{
     end = end-1;
     document.getElementsByClassName("game-timer__bar")[0].innerHTML = end+"s";
-    // setTimeout(updateTimerDisplay(),1000)
+    game.timerDisplay.style.width=end/60*100+"%";
     gametimer=setTimeout(function() {
       updateTimerDisplay()
   },1000)
